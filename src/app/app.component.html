@@ -7,7 +7,7 @@
 
 <div class="courses">
 
-  <course-card [course]="coreCourse"></course-card>
+  <course-card (courseSelect)="onCourseSelected($event)" [course]="coreCourse"></course-card>
   <course-card [course]="rxJSCourse"></course-card>
   <course-card [course]="ngRXCourse"></course-card>
 

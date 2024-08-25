@@ -12,10 +12,15 @@ import { Course } from '../model/course';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
   title = 'courseapp';
 
-  coreCourse = COURSES[0];
-  rxJSCourse = COURSES[1];
-  ngRXCourse = COURSES[2];
+  coreCourse:Course = COURSES[0];
+  rxJSCourse:Course = COURSES[1];
+  ngRXCourse:Course = COURSES[2];
+
+  onCourseSelected(course: Course) {
+    console.log('App Component - Click event bubbled', course);
+  }
 
 }
